@@ -18,10 +18,12 @@
     <main>
 
         <div class="miniteur">
-            <input class="objet" type="text" id="time" placeholder="Rentrer votre miniteur">
+            <p>Miniteur</p>
+            <input type="text" id="time" placeholder="Rentrer votre miniteur">
+
             <div class="augmenter_diminuer">
-                <div>+</div>
-                <div>-</div>
+                <div id="plus">+</div>
+                <div id="minus">-</div>
             </div>
 
         </div>
