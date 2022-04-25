@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+main {
+    background-color: green;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.miniteur {
+    background-color: rgb(42, 138, 165);
+    height: 30vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.objet {
+    background-color: rgb(215, 58, 58);
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 30%;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.augmenter_diminuer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5vh;
+    width: 50%;
+}
+
+.augmenter_diminuer div {
+    background-color: rgb(218, 77, 194);
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 20px;
+}
