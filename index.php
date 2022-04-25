@@ -18,7 +18,7 @@
     <main>
 
         <div class="miniteur">
-            <div class="objet">test</div>
+            <input class="objet" type="text" id="time" placeholder="Rentrer votre miniteur">
             <div class="augmenter_diminuer">
                 <div>+</div>
                 <div>-</div>

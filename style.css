@@ -24,7 +24,6 @@ main {
 }
 
 .objet {
-    background-color: rgb(215, 58, 58);
     display: flex;
     justify-content: center;
     height: 30%;
