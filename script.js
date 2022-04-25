@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    function getValueTimer() {
-        // Sélectionner l'élément input et récupérer sa valeur
-        let input = document.getElementById("time").value;
-        // Afficher la valeur
-        alert(input);
+    let input = document.querySelector("#time");
+
+    function getValueTimer(data) {
+        data_integer = parseInt(data.value, 10);
+        return data_integer;
     }
+
+    input.addEventListener("focusout", () => {
+        console.log(getValueTimer(input));
+    });
 });
