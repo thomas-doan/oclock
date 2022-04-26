@@ -9,6 +9,7 @@ main {
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .miniteur {
@@ -22,6 +23,20 @@ main {
     border-radius: 20px;
 }
 
+.miniteur :nth-child(3) {
+    cursor: pointer;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    height: 10%;
+    width: 10%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.miniteur :nth-child(3):hover {
+    background-color: darkorange;
+}
+
 .augmenter_diminuer {
     display: flex;
     align-items: center;
@@ -30,9 +45,79 @@ main {
     width: 50%;
 }
 
-.augmenter_diminuer div {
-    background-color: rgb(218, 77, 194);
+.augmenter_diminuer div,
+.augmenter_diminuer input {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
     padding-left: 10%;
     padding-right: 10%;
     border-radius: 20px;
+}
+
+
+/* chrono */
+
+#chronometre {
+    width: 70vw;
+    border-radius: 20px;
+    background-color: rgb(220, 106, 106);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chrono {
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+button {
+    font-size: 25px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:not(:last-child) {
+    margin-right: 15px;
+}
+
+button:nth-child(2) {
+    background-color: #dfdfdf;
+}
+
+button:last-child {
+    background-color: #3a6eff;
+    color: white;
+}
+
+
+/* horloge */
+
+.horloge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(27, 5, 5);
+    text-shadow: 0 2px 50px rgba(10, 10, 10, 0.5);
+}
+
+.heures {
+    width: 500px;
+    font-size: 100px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.date {
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 10px;
 }

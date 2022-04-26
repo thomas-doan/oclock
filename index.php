@@ -19,13 +19,36 @@
 
         <div class="miniteur">
             <p>Miniteur</p>
-            <input type="text" id="time" placeholder="Rentrer votre miniteur">
+            <div class="augmenter_diminuer">
 
+                <input type="number" id="timeMinute" placeholder="Minute">
+            </div>
+
+            <div>Start</div>
+            <div>0</div>
             <div class="augmenter_diminuer">
                 <div id="plus">+</div>
                 <div id="minus">-</div>
             </div>
 
+        </div>
+
+        <div id="chronometre">
+            <p>chronometre</p>
+            <div id="chrono">00:00:00</div>
+            <div id="buttons">
+                <button id="reset" class="button">Reset</button>
+                <button id="tour" class="button">Tour</button>
+                <button id="stop" class="button">Arrêter</button>
+                <button id="start" class="button">Démarrer</button>
+            </div>
+            <div class="list"></div>
+        </div>
+
+        <div class="horloge">
+            <div> ! Horloge !</div>
+            <div class="heures"></div>
+            <div class="date"></div>
         </div>
     </main>
 </body>
