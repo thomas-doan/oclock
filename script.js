@@ -10,17 +10,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //chrono
 
     function increaseMinute() {
-        console.log("++");
-        console.log(newData);
         newData = newData + 60;
-        console.log(newData);
     }
 
     function decreaseMinute() {
-        console.log("--");
-        console.log(newData);
         newData = newData - 60;
-        console.log(newData);
     }
 
     function showTime(data_time) {
@@ -224,4 +218,84 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
 
     affichageHeure();
+
+    /* reveil */
+
+    var reveil_heuresDiv = document.querySelector(".reveil_heures");
+    var reveil_dateDiv = document.querySelector(".reveil_date");
+
+    var reveil_affichageHeure = function() {
+        var reveil_today,
+            reveil_annee,
+            reveil_listeMois,
+            reveil_mois,
+            reveil_listeJours,
+            reveil_jourNUmero,
+            reveil_jourNom,
+            reveil_heures,
+            reveil_minutes,
+            reveil_secondes,
+            reveil_deuxChiffres;
+
+        reveil_today = new Date();
+
+        reveil_annee = reveil_today.getFullYear();
+
+        reveil_listeMois = [
+            "Janvier",
+            "Février",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juillet",
+            "Août",
+            "Septembre",
+            "Octobre",
+            "Novembre",
+            "Décembre",
+        ];
+        reveil_mois = reveil_listeMois[reveil_today.getMonth()];
+        reveil_jourNUmero = reveil_today.getDate();
+
+        reveil_listeJours = [
+            "Dimanche",
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi",
+        ];
+        reveil_jourNom = reveil_listeJours[reveil_today.getDay()];
+
+        reveil_deuxChiffres = function(element) {
+            if (element < 10) {
+                return (element = "0" + element);
+            } else {
+                return element;
+            }
+        };
+
+        reveil_heures = reveil_deuxChiffres(reveil_today.getHours());
+
+        reveil_minutes = reveil_deuxChiffres(reveil_today.getMinutes());
+
+        reveil_secondes = reveil_deuxChiffres(reveil_today.getSeconds());
+
+        reveil_heuresDiv.textContent =
+            reveil_heures + ":" + reveil_minutes + ":" + reveil_secondes;
+        reveil_dateDiv.textContent =
+            reveil_jourNom +
+            ", " +
+            reveil_jourNUmero +
+            " " +
+            reveil_mois +
+            " " +
+            reveil_annee;
+
+        setTimeout(reveil_affichageHeure, 1000);
+    };
+
+    reveil_affichageHeure();
 });

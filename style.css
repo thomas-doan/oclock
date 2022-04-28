@@ -121,3 +121,30 @@ button:last-child {
     font-family: 'Nunito Sans', sans-serif;
     padding-top: 10px;
 }
+
+
+/* reveil */
+
+.reveil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(27, 5, 5);
+    text-shadow: 0 2px 50px rgba(10, 10, 10, 0.5);
+}
+
+.reveil_heures {
+    width: 500px;
+    font-size: 100px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.reveil_date {
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 10px;
+}

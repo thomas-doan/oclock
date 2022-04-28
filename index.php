@@ -50,6 +50,12 @@
             <div class="heures"></div>
             <div class="date"></div>
         </div>
+
+        <div class="reveil">
+            <div> ! reveil !</div>
+            <div class="reveil_heures"></div>
+            <div class="reveil_date"></div>
+        </div>
     </main>
 </body>
 
